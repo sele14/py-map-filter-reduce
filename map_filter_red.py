@@ -1,6 +1,7 @@
 import math
 import sys
 import statistics
+from functools import reduce
 
 # source: https://www.youtube.com/watch?v=hUes6y2b--0&list=WL&index=13&ab_channel=Socratica
 
@@ -47,3 +48,5 @@ print(list(filter(lambda p: p > avg, prices)))
 
 print("\n")
 print("..... REDUCE FUNCTION ......")
+mults = lambda x,y: x*y
+print(reduce(mults, prices))
