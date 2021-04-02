@@ -1,7 +1,11 @@
 import math
 import sys
+import statistics
 
 # source: https://www.youtube.com/watch?v=hUes6y2b--0&list=WL&index=13&ab_channel=Socratica
+
+print("\n")
+print("..... MAP FUNCTION ......")
 
 l = [1, 3, 9, 4, 2]
 
@@ -30,5 +34,16 @@ c_to_f = lambda data: (data[0], 9/5 * data[1] + 32)
 # apply c_to_f function to our temps tuples
 print(list(map(c_to_f, temps)))
 
-
 ###### FILTER FUNCTION  ####
+print("\n")
+print("..... FILTER FUNCTION ......")
+prices = [41, 55, 19, 2, 99, 12, 55]
+avg = statistics.mean(prices)
+
+print("Average is: ", avg)
+print("Values above average are: ")
+print(list(filter(lambda p: p > avg, prices)))
+
+
+print("\n")
+print("..... REDUCE FUNCTION ......")
